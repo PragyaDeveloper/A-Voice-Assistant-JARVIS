@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Smart Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>J·A·R·V·I·S</h1>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
+        </header>
+
+        <!-- Main Section -->
+        <main class="main">
+            <!-- Assistant Interaction Panel -->
+            <section class="interaction-panel">
+                <div class="avatar-wrapper">
+                    <img src="giphy.gif" alt="Avatar" class="avatar">
+                </div>
+                <h2 id="current-time">--:--:--</h2>
+                <p id="current-command-text">Tap the microphone to begin speaking</p>
+                <button id="talk-btn" class="mic-btn"><i class="fas fa-microphone"></i></button>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="feature">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3>Weather</h3>
+                    <p id="weather-result">Fetching...</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>News</h3>
+                    <ul id="news-list"></ul>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-book"></i>
+                    <h3>Dictionary</h3>
+                    <p id="dictionary-result">Awaiting query...</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Calculator</h3>
+                    <p id="calculator-result">Say a calculation</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>Uptime: <span id="uptime">0m</span> | Commands Processed: <span id="commands-processed">0</span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
